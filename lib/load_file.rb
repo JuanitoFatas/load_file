@@ -12,8 +12,8 @@ module LoadFile
   # @return [NilClass] nil when file not exists
   def self.load(file:, constant:)
     ignore_file_not_exists do
-      reader = Loader.new(file, constant)
-      reader.set_constant
+      loader = Loader.new(file, constant)
+      loader.set_constant
     end
   end
 
@@ -24,8 +24,8 @@ module LoadFile
   # @return [Hash] loaded file content, raises an error when file not exists
   # @return [NilClass] nil when file not exists
   def self.load!(file:, constant:)
-    reader = Loader.new(file, constant)
-    reader.set_constant
+    loader = Loader.new(file, constant)
+    loader.set_constant
   end
 
   # Loads files into constant.
