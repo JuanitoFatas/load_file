@@ -2,7 +2,10 @@
 
 ## Unreleased
 
+## 1.1.0
+
 - Adds support to (over)load file(s) into namespaced constant
+- documentation fixes
 
 ## 1.0.0
 
