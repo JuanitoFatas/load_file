@@ -75,6 +75,21 @@ RSpec.describe LoadFile::Loader do
     end
   end
 
+  describe "set constant under namespace" do
+    class Heroku
+    end
+
+    it "sets variables from yaml into desired constant" do
+      reader = LoadFile::Loader.new(sample_yaml_path, :App, namespace: Heroku)
+
+      reader.set_constant
+
+      expect(Heroku::App).to be_a Hash
+    end
+
+    after { Object.send(:remove_const, :Heroku) }
+  end
+
   describe "existing constant" do
     before { Object.const_set :App, { "open" => "exists" } }
     after { Object.send(:remove_const, :App) }
