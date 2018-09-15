@@ -1,6 +1,13 @@
 # LoadFile
 
-[![Build Status](https://travis-ci.org/JuanitoFatas/load_file.svg?branch=master)](https://travis-ci.org/JuanitoFatas/load_file)
+[![Gem Version](https://badge.fury.io/rb/os_name.svg)][gem]
+[![Build Status](https://travis-ci.org/JuanitoFatas/load_file.svg?branch=master)][travis]
+[![inch-ci.org doc badge](https://inch-ci.org/github/juanitofatas/load_file.svg?branch=master)][docinfo]
+
+[gem]: https://rubygems.org/gems/load_file
+[travis]: https://travis-ci.org/JuanitoFatas/load_file
+[docs]: https://inch-ci.org/github/juanitofatas/load_file
+[docinfo]: https://www.rubydoc.info/github/JuanitoFatas/load_file/master
 
 Load/Overload YAML/JSON file(s) into desired constant.
 
