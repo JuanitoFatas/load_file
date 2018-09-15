@@ -6,8 +6,9 @@ module LoadFile
   #
   # @return [Hash] parsed YAML or JSON content
   class Loader < Hash
-    def initialize(file, constant_name)
+    def initialize(file, constant_name, namespace: Object)
       @file = file
+      @namespace = namespace
       @constant = find_or_define(constant_name)
 
       update parsed_content
@@ -25,13 +26,13 @@ module LoadFile
 
     private
 
-    attr_reader :file, :constant
+    attr_reader :file, :constant, :namespace
 
     def find_or_define(constant_name)
-      if Object.const_defined?(constant_name)
-        Object.const_get(constant_name)
+      if namespace.const_defined?(constant_name)
+        namespace.const_get(constant_name)
       else
-        Object.const_set(constant_name, {})
+        namespace.const_set(constant_name, {})
       end
     end
 

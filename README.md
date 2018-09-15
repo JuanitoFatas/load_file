@@ -30,6 +30,18 @@ HerokuApp
   "environments"=>{"test"=>{"scripts"=>{"test"=>"bundle exec rake test"}}}}
 ```
 
+You can also load into a namespaced constant:
+
+```ruby
+LoadFile.load(file: "examples/app.json", constant: :App, namespace: Heroku)
+
+# Heroku::App will be the hash loaded from examples/app.json
+```
+
+The caveat here is the keyword argument `namespace` must be a ruby object.
+
+Or should I introduce `constantize`? Please let me know.
+
 ### What if I want to override existing constant?
 
 Use `overload` APIs.
