@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Adds support to load file into namespaced constant
+
 ## 1.0.0
 
 1.0.0 includes:
