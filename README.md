@@ -1,5 +1,7 @@
 # LoadFile
 
+[![Build Status](https://travis-ci.org/JuanitoFatas/load_file.svg?branch=master)](https://travis-ci.org/JuanitoFatas/load_file)
+
 Load/Overload YAML/JSON file(s) into desired constant.
 
 ## Installation
